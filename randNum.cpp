@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     {
         for (int index = 0; index < 1000000; index++) 
         {
-            randomNumber = (rand() % 10000000) + 1;
+            randomNumber = (rand() % 10) + 1;
             myFile << randomNumber << endl;
         }
         myFile << endl << endl << endl;
