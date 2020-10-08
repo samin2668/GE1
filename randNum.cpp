@@ -12,12 +12,12 @@ int main(int argc, char *argv[])
     myFile.open(file);
     
     srand((unsigned) time(0));
-    int randomNumber;
+    unsigned long int randomNumber;
     for(int i = 0; i < 10; i++)
     {
         for (int index = 0; index < 1000000; index++) 
         {
-            randomNumber = (rand() % 10) + 1;
+            randomNumber = (rand() % 10000000) + 1;
             myFile << randomNumber << endl;
         }
         myFile << endl << endl << endl;
