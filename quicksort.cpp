@@ -1,5 +1,4 @@
 #include "GE2.h"
-using namespace std;
 
 int arr[1000000];
 int temp[1000000];
@@ -17,19 +16,20 @@ int main()
             arr[j] = num;
         }
         auto begin = std::chrono::high_resolution_clock::now();
-        mergesort(arr, temp, 0, 999999, 1000);
+        int n = sizeof(arr) / sizeof(arr[0]);  
+        quickSort(arr, 0, n - 1);
         auto end = std::chrono::high_resolution_clock::now();
         auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
         cout << "Set " << i << ": " << elapsed.count() * 1e-9 << endl;
     }
     myFile.close();
 
-    /* ofstream outFile;
+    ofstream outFile;
     outFile.open("test.txt");
     for(int i = 0; i < 1000000; i++)
     {
         outFile << arr[i] << endl;
-    } */
+    }
 
     return 0;
 }
