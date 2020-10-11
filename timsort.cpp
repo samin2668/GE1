@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
         }
         auto begin = std::chrono::high_resolution_clock::now();
         int n = sizeof(arr) / sizeof(arr[0]);  
-        quickSort(arr, 0, n - 1, k);
+        timSort(arr, temp, n);
         auto end = std::chrono::high_resolution_clock::now();
         auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
         cout << "Set " << i << ": " << elapsed.count() * 1e-9 << endl;

@@ -4,10 +4,12 @@ using namespace std;
 int arr[1000000];
 int temp[1000000];
 
-int main()
+int main(int argc, char *argv[])
 {
+    string fileName = argv[1];
+    int k = atoi(argv[2]);
     ifstream myFile;
-    myFile.open("num1.txt");
+    myFile.open(fileName);
     int num;
     for(int i = 0; i < 10; i++)
     {
@@ -17,7 +19,7 @@ int main()
             arr[j] = num;
         }
         auto begin = std::chrono::high_resolution_clock::now();
-        mergesort(arr, temp, 0, 999999, 1000);
+        mergesort(arr, temp, 0, 999999, 1000, k);
         auto end = std::chrono::high_resolution_clock::now();
         auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
         cout << "Set " << i << ": " << elapsed.count() * 1e-9 << endl;
