@@ -1,0 +1,17 @@
+to compile 
+    g++ GE2.cpp ***.cpp (replace *** with algorithm name)
+
+    ex - compiling mergesort
+        g++ GE2.cpp mergesort.cpp
+
+to run
+    mergesort and quicksort
+    ./a.out ***.txt k
+        replace *** with file name of input
+        k is the size partition when insertion sort will be done
+    
+    redixsort and timsort
+    ./a.out ***.txt
+        replace *** with file name of input
+
+    

@@ -26,12 +26,12 @@ int main(int argc, char *argv[])
     }
     myFile.close();
 
-    ofstream outFile;
+    /* ofstream outFile;
     outFile.open("test.txt");
     for(int i = 0; i < 1000000; i++)
     {
         outFile << arr[i] << endl;
-    }
+    } */
 
     return 0;
 }

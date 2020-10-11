@@ -8,6 +8,8 @@ using namespace std;
 int main(int argc, char *argv[]) 
 {
     string file = argv[1];
+    int l = atoi(argv[2]);
+    int h = atoi(argv[3]);
     ofstream myFile;
     myFile.open(file);
     
@@ -17,7 +19,7 @@ int main(int argc, char *argv[])
     {
         for (int index = 0; index < 1000000; index++) 
         {
-            randomNumber = (rand() % 10000000) + 1;
+            randomNumber = (rand() % h) + l;
             myFile << randomNumber << endl;
         }
         myFile << endl << endl << endl;

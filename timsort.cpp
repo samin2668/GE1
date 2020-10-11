@@ -6,9 +6,8 @@ int temp[1000000];
 int main(int argc, char *argv[])
 {
     string fileName = argv[1];
-    int k = atoi(argv[2]);
     ifstream myFile;
-    myFile.open("num1.txt");
+    myFile.open(fileName);
     int num;
     for(int i = 0; i < 10; i++)
     {
@@ -26,12 +25,12 @@ int main(int argc, char *argv[])
     }
     myFile.close();
 
-    ofstream outFile;
+    /* ofstream outFile;
     outFile.open("test.txt");
     for(int i = 0; i < 1000000; i++)
     {
         outFile << arr[i] << endl;
     }
-
+ */
     return 0;
 }
